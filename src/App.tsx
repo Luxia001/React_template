@@ -18,6 +18,10 @@ function App() {
               <Route
                 path="/"
                 element={<Home />}
+              ></Route>
+              <Route
+                path="/:lang"
+                element={<Home />}
               />
               <Route
                 path="/page1"

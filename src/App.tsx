@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import React, { lazy, Suspense } from "react";
+import UseScrollToTop from "./hooks/scrollTop.ts";
 
 const NavBar = React.lazy(() => import("./components/navBar.tsx"));
 const Home = lazy(() => import("./pages/home.tsx"));
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <UseScrollToTop></UseScrollToTop>
         <Suspense fallback={<div>Loading...</div>}>
           <NavBar></NavBar>
           <div className="relative">

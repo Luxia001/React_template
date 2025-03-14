@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+:root {
+    --color-dark-main: #1965c9;
+    --color-main: #00c8ff;
+    --color-white: #ffffff;
+    --color-gray: #a4a4a4;
+    --color-dark-gray: #444444;
+  }
+
+  * {
+    font-family: "Prompt", sans-serif;
+  }

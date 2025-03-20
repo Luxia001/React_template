@@ -1,4 +1,3 @@
-import React from "react";
 import { timeFullTH } from "../helpers/time";
 
 function PageNotFound() {

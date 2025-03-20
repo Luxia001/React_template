@@ -4,14 +4,17 @@ import { FormControl, FormLabel, Radio, RadioGroup } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 function Home() {
   const langParam = useParams().lang ?? "en";
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     i18n.changeLanguage(langParam);
   }, [langParam]);
+
   return (
     <div>
       <h1>Home</h1>
@@ -44,6 +47,8 @@ function Home() {
         </RadioGroup>
       </FormControl>
       <h1>{t("Welcome to React")}</h1>
+      <div className=" bg-amber-100 h-screen "></div>
+      <button onClick={() => navigate("/page1")}>go to page1</button>
     </div>
   );
 }

@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 :root {
-    --color-dark-main: #1965c9;
-    --color-main: #00c8ff;
-    --color-white: #ffffff;
-    --color-gray: #a4a4a4;
-    --color-dark-gray: #444444;
-  }
+  --color-dark-main: #1965c9;
+  --color-main: rgb(255, 200, 20);
+  --color-white: #ffffff;
+  --color-gray: #a4a4a4;
+  --color-dark-gray: #444444;
+}
 
-  * {
-    font-family: "Prompt", sans-serif;
-  }
+* {
+  font-family: "Prompt", sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px; /* ขอบมน */
+  cursor: pointer; /* เปลี่ยน cursor */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* เงา */
+}

@@ -11,31 +11,29 @@ const PageNotFound = React.lazy(() => import("./components/pageNotFound.tsx"));
 function App() {
   UseScrollToTop();
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <NavBar />
-        <div className="relative">
-          <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            {/* <Route
+    <Suspense fallback={<div>Loading...</div>}>
+      <NavBar />
+      <div className="relative">
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          {/* <Route
               path="/:lang"
               element={<Home />}
             /> */}
-            <Route
-              path="/page1"
-              element={<Page1 />}
-            />
-            <Route
-              path="*"
-              element={<PageNotFound />}
-            />
-          </Routes>
-        </div>
-      </Suspense>
-    </>
+          <Route
+            path="/page1"
+            element={<Page1 />}
+          />
+          <Route
+            path="*"
+            element={<PageNotFound />}
+          />
+        </Routes>
+      </div>
+    </Suspense>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { FormControl, FormLabel, Radio, RadioGroup } from "@mui/material";
 
@@ -35,6 +35,7 @@ function Home() {
           }}
         >
           <FormControlLabel
+            className=""
             value="en"
             control={<Radio />}
             label="en"
@@ -47,7 +48,6 @@ function Home() {
         </RadioGroup>
       </FormControl>
       <h1>{t("Welcome to React")}</h1>
-      <div className=" bg-amber-100 h-screen "></div>
       <button onClick={() => navigate("/page1")}>go to page1</button>
     </div>
   );
